@@ -2111,6 +2111,41 @@ let test =
               (int))))))))
 
 ================================================================================
+match expression single-line
+================================================================================
+
+let test = match x with | Some x -> x | None -> 1
+
+--------------------------------------------------------------------------------
+
+(file
+  (declaration_expression
+    (function_or_value_defn
+      (value_declaration_left
+        (identifier_pattern
+          (long_identifier_or_op
+            (identifier))))
+      (match_expression
+        (long_identifier_or_op
+          (identifier))
+        (rules
+          (rule
+            (identifier_pattern
+              (long_identifier_or_op
+                (identifier))
+              (identifier_pattern
+                (long_identifier_or_op
+                  (identifier))))
+            (long_identifier_or_op
+              (identifier)))
+          (rule
+            (identifier_pattern
+              (long_identifier_or_op
+                (identifier)))
+            (const
+              (int))))))))
+
+================================================================================
 match expression 3 rules
 ================================================================================
 
